@@ -1,0 +1,65 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Consumes\Commands\**" />
+    <Compile Remove="Zones\Commands\**" />
+    <EmbeddedResource Remove="Consumes\Commands\**" />
+    <EmbeddedResource Remove="Zones\Commands\**" />
+    <None Remove="Consumes\Commands\**" />
+    <None Remove="Zones\Commands\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Device\" />
+    <None Remove="Devices\SaveDevice\" />
+    <None Remove="Configuration\" />
+    <None Remove="Configuration\Commands\" />
+    <None Remove="MediatR" />
+    <None Remove="Notification\" />
+    <None Remove="Constants\" />
+    <None Remove="Consumes\Validations\" />
+    <None Remove="Autofac" />
+    <None Remove="Consumes\Dto\" />
+    <None Remove="Devices\Dto\" />
+    <None Remove="Zones\Dto\" />
+    <None Remove="Consumes\Commands\" />
+    <None Remove="Consumes\Queries\" />
+    <None Remove="Consumes\Queries\GetConsumes\" />
+    <None Remove="Devices\Commands\" />
+    <None Remove="Devices\Queries\" />
+    <None Remove="Devices\Queries\GetDevice\" />
+    <None Remove="Devices\Commands\SaveDevice\" />
+    <None Remove="Zones\Commands\" />
+    <None Remove="Zones\Queries\" />
+    <None Remove="Zones\Queries\GetDistricts\" />
+    <None Remove="Zones\Queries\GetZones\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="10.1.1" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.1.1" />
+    <PackageReference Include="MediatR" Version="9.0.0" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="9.0.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="5.0.0" />
+    <PackageReference Include="Autofac" Version="6.2.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Project.Domain\Project.Domain.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Configuration\Constants\" />
+    <Folder Include="Consumes\Validations\" />
+    <Folder Include="Devices\Dto\" />
+    <Folder Include="Zones\Dto\" />
+    <Folder Include="Devices\Commands\" />
+    <Folder Include="Devices\Queries\" />
+    <Folder Include="Devices\Queries\GetDevice\" />
+    <Folder Include="Devices\Commands\SaveDevice\" />
+    <Folder Include="Zones\Queries\" />
+    <Folder Include="Zones\Queries\GetDistricts\" />
+    <Folder Include="Zones\Queries\GetZones\" />
+  </ItemGroup>
+</Project>
