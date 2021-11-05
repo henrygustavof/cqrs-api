@@ -31,7 +31,7 @@ namespace Project.API.Controllers
             _mapper = mapper;
         }
 
-        [Route("")]
+        [Route("{id}")]
         [HttpGet]
         [ProducesResponseType(typeof(DeviceDto), (int) HttpStatusCode.OK)]
         public async Task<IActionResult> Get(Guid id)

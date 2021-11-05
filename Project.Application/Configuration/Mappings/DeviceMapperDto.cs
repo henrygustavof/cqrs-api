@@ -9,6 +9,7 @@ namespace Project.Application.Configuration.Mappings
         public DeviceMapperDto()
         {
             CreateMap<SaveDeviceRequest, SaveDeviceCommand>();
+            CreateMap<SaveDeviceCommand, Domain.Entity.Device>();
             CreateMap<SaveDeviceCommand, Domain.Entity.Zone>();
             CreateMap<Domain.Entity.Zone, DeviceDto>();
             CreateMap<Domain.Entity.Device, DeviceDto>();
